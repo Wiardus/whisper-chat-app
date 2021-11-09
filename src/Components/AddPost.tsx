@@ -8,7 +8,7 @@ const AddPost = ({addPost}: Props) => {
     const [content, setContent] = useState('')
     return (
         <form className="addPost">
-            <input value={content} type="text" placeholder="wat wil je kwijt..." onChange={e => {setContent(e.target.value)}} />
+            <input value={content} type="text" placeholder="Wat wil je kwijt..." onChange={e => {setContent(e.target.value)}} />
             <button type="submit" id="addPostBtn" onClick={e => {e.preventDefault(); addPost(content); setContent('');}}>Fluisteren</button>
         </form>
     )

@@ -4,7 +4,10 @@ interface Props {
 
 const Post = ({post}: Props) => {
     return (
-        <p>{post.content}</p>
+        <div className="postContainer">
+            <p id="post">{post.content}</p>
+        </div>
+        
     )
 }
 

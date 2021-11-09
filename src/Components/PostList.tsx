@@ -9,7 +9,7 @@ interface Props {
 
 const PostList = ({posts}: Props) => {
     return (
-        <div>
+        <div className="postList">
             {posts.map(post =>(
                 <Post key={post.content} post={post}/>
             ))}

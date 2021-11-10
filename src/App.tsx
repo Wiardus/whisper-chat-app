@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AddPost from './Components/AddPost';
+import Login from './Components/Login';
 import PostList from './Components/PostList';
 import { Profile } from './Components/Profile';
 import './style.sass';
@@ -26,11 +27,15 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1>Whisper</h1>
-      <Profile />
-      <AddPost addPost ={addPost}/>
-      <PostList posts={posts}/>
+    <div>
+      <Login username={''} isLoggedIn={false}/>
+      <div className="App">
+        <h1>Whisper</h1>      
+        <Profile />
+        <AddPost addPost ={addPost}/>
+        <PostList posts={posts}/>
+      </div>
+     
     </div>
   );
 }

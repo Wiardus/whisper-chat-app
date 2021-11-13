@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 interface Props {
     username: string
@@ -7,9 +7,11 @@ interface Props {
 }
 
 let user = {
+    // moet nog verbonden worden met props van een create account component 
     username: 'Ynte',
     password: '123'
 }
+
 
 const Login: React.FC<Props> = ({username, password}: Props) => {
     const [userName, setUserName] = useState({
@@ -24,6 +26,10 @@ const Login: React.FC<Props> = ({username, password}: Props) => {
         isLoggedIn: false
     })
 
+    useEffect(() => {
+        localStorage.setItem("username", JSON.stringify(user.username))
+    })
+    
  
     function logIn () {
         if (userName.username !== user.username || passWord.password !== user.password) {
@@ -52,7 +58,7 @@ const Login: React.FC<Props> = ({username, password}: Props) => {
                 <h3>Password:</h3>
                 <input type="text" value={passWord.password} onChange={(e) => setPassword({...passWord, password: e.target.value})} placeholder="Enter your password..." />
                 <button type="button" onClick={logIn}>Login</button>
-            </form>
+            </form>        
         </div>
        
     )

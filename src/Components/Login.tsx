@@ -6,7 +6,7 @@ interface Props {
     isLoggedIn: boolean
 }
 
-let user = {
+export let user = {
     // moet nog verbonden worden met props van een create account component 
     username: 'Ynte',
     password: '123'

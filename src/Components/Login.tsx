@@ -52,6 +52,7 @@ const Login: React.FC<Props> = ({username, password}: Props) => {
 
     return (
         <div>
+            <h1>Whisper</h1>
             <form className="login">
                 <h3>Username:</h3>
                 <input type="text" value={userName.username} onChange={(e) => setUserName({...userName, username: e.target.value})} placeholder="Enter your username..." />

@@ -92,12 +92,13 @@ h1
 
 .profilePicture 
   border-radius: 50%
-  background: blue
-  width: 50px
-  height: 50px
-  top: 25px
+  background-image: url("Zomer 2020 stoere foto.jpg")
+  background-size: cover
+  width: 75px
+  height: 75px
   left: 25px
-  position: absolute
+  position: sticky
+  top: 0
   cursor: pointer
   
 #byUser 
@@ -106,11 +107,33 @@ h1
   text-align: left
   
 .comment
-  //position: absolute
+  display: flex
   width: 20px
   height: 20px
   background: black
   border-radius: 50%
   background: inherit
-  cursor: pointer
   border-style: solid
+  border-bottom-right-radius: 2%
+  
+  input
+    margin-left: 30px
+    background: #f3f2ef
+    border-style: none
+    border-color: #f3f2ef
+
+  button
+    color: white
+    background: $main-light-blue
+    border-style: none
+    border-radius: 5%
+    width: 10 0px
+    height: 20px
+    font-family: $main-font
+    font-size: 1em
+    cursor: pointer
+
+    &:hover
+      opacity: 75%
+    
+ 

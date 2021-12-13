@@ -1,7 +1,7 @@
 interface Post {
     content: string
     user?: string
-    comments?: string[]
+    comment?: string
 }
 
 type AddPost = (content: string) => void

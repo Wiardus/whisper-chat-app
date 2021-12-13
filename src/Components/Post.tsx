@@ -3,15 +3,17 @@ import { useState } from 'react';
 
 interface Props {
     post: Post
-    comments?: PostComment
+    comment?: Post
 }
 
 
-const Post = ({post, comments}: Props) => {
+const Post = ({post}: Props) => {
     const [comment, setComment] = useState('')
+    const [comments, setComments] = useState([] as any)
 
     const addComment = (comment: string) => {
-        alert(comment)
+        setComments([...comments, comment])
+ 
     }
     
     return (
@@ -22,7 +24,10 @@ const Post = ({post, comments}: Props) => {
                 <input value={comment} type="text" placeholder="wat vind je hiervan..." onChange={e => {setComment(e.target.value)}} />
                 <button type="submit" onClick={e => {e.preventDefault(); addComment(comment); setComment('');}}>Reageer</button>
             </form>
-            <p>{comment}</p> 
+            <ul>
+            {comments.map((comment: string) =>(
+                <li key={comment}>{comment}</li> 
+            ))} </ul>
 
         </div>
         

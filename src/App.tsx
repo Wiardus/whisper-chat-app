@@ -22,7 +22,7 @@ const initialComments: PostComment[] = [
 
 function App() {
   const [posts, setPosts] = useState(initialPosts)
-  const [comments, setComments] = useState(initialComments)
+  //const [comments, setComments] = useState(initialComments)
   
   const addPost: AddPost = (content: string) => {
     if (content !== '') { 

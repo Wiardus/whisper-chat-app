@@ -14,11 +14,11 @@ const initialPosts: Post[] = [
   }
 ]
 
-const initialComments: PostComment[] = [
+/* const initialComments: PostComment[] = [
   {
     text: 'hoi'
   }
-]
+] */
 
 function App() {
   const [posts, setPosts] = useState(initialPosts)

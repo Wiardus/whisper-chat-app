@@ -4,9 +4,11 @@
 $main-light-blue: hsla(227, 89%, 41%, 0.7)
 $header-font: 'Mochiy Pop One', sans-serif
 $main-font: 'Fira Sans', sans-serif
+$font-color: #555
+$background-color: #f3f2ef
 
 body 
-  background: #f3f2ef
+  background: $background-color
 
 .login 
   height: 100vh
@@ -82,13 +84,20 @@ h1
 
   #post 
   text-align: center
-  color: #555
+  color: $font-color
   font-family: $main-font
 
 .profile
   width: 500px
   height: 500px
-  background: cyan
+  background: #ffffff
+  font-family: $main-font
+  border-radius: 3%
+  color: $font-color
+  position: absolute
+
+  h2
+    color: $main-light-blue
 
 .profilePicture 
   border-radius: 50%
@@ -100,8 +109,8 @@ h1
   position: sticky
   top: 0
   cursor: pointer
-  
-#byUser 
+
+.byUser 
   font-style: italic
   font-size: 70%
   text-align: left
@@ -110,7 +119,6 @@ h1
   display: flex
   width: 20px
   height: 20px
-  background: black
   border-radius: 50%
   background: inherit
   border-style: solid
@@ -118,9 +126,9 @@ h1
   
   input
     margin-left: 30px
-    background: #f3f2ef
+    background: $background-color
     border-style: none
-    border-color: #f3f2ef
+    
 
   button
     color: white
@@ -136,4 +144,5 @@ h1
     &:hover
       opacity: 75%
     
+
  

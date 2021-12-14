@@ -37,18 +37,15 @@ const Login: React.FC<Props> = ({username, password}: Props) => {
             return 
         } else {
             alert('Welcome '+ user.username)
-            setIsLoggedIn({...IsLoggedIn, isLoggedIn: true})
-                       
+            setIsLoggedIn({...IsLoggedIn, isLoggedIn: true})                   
         }   
     }
 
-    if (IsLoggedIn.isLoggedIn === false) {
+     if (IsLoggedIn.isLoggedIn === false) {
         document.body.style.overflowY = 'hidden'
     } else {
         document.body.style.overflowY = 'visible'
-    }
-
-    console.log(IsLoggedIn)
+    } 
 
     return (
         <div>
@@ -60,11 +57,8 @@ const Login: React.FC<Props> = ({username, password}: Props) => {
                 <input type="text" value={passWord.password} onChange={(e) => setPassword({...passWord, password: e.target.value})} placeholder="Enter your password..." />
                 <button type="button" onClick={logIn}>Login</button>
             </form>        
-        </div>
-       
+        </div>      
     )
 }
-
-
 
 export default Login

@@ -14,15 +14,9 @@ const initialPosts: Post[] = [
   }
 ]
 
-/* const initialComments: PostComment[] = [
-  {
-    text: 'hoi'
-  }
-] */
-
 function App() {
   const [posts, setPosts] = useState(initialPosts)
-  //const [comments, setComments] = useState(initialComments)
+
   
   const addPost: AddPost = (content: string) => {
     if (content !== '') { 
@@ -31,19 +25,9 @@ function App() {
     } else {
       alert('Your whisper is inaudible')
       return 
-    }
-   
+    }   
   }
- 
-  /* const addComment: AddComment = (comment: string) => {
-    const newComment = {comment}
-    //setComments([...comments, newComment])
-
-    //comments.push(comment)
-    //console.log(comments)
-    //return ( <ol>{comments.map((comment) => <li>{comment}</li>)  } </ol> )
-} */  
-
+   
   return (
     <div>
       <Login username={''} isLoggedIn={false}/>
